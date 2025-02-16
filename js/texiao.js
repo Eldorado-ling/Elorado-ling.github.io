@@ -1,39 +1,33 @@
-// [BlogRoot]/source/js/stars.js  
 document.addEventListener('DOMContentLoaded',  () => {
-  const starCount = Math.floor(Math.random()  * 4) + 30;
+  // 生成4-6颗星星 
+  const starCount = Math.floor(Math.random()  * 3) + 30;
   
-  // 初始化星星 
   for (let i = 0; i < starCount; i++) {
-    createStar(true); // 首次创建 
+    createStar();
   }
- 
-  // 持续维护星星数量 
-  setInterval(() => {
-    const currentStars = document.querySelectorAll('.star').length; 
-    if (currentStars < 3) createStar();
-  }, 3000);
 });
  
-function createStar(initial = false) {
+function createStar() {
   const star = document.createElement('div'); 
   star.className  = 'star';
   
-  // 首次生成时随机位置 
-  if (initial) {
-    star.style.left  = Math.random()  * 100 + 'vw';
-    star.style.top  = Math.random()  * 100 + 'vh';
-  }
+  // 区域控制（左上30%x30% / 右上30%x30%）
+  const isLeft = Math.random()  > 0.5;
+  const posX = isLeft ? 
+    Math.random()  * 50 : 
+    70 + Math.random()  * 50;
+  const posY = Math.random()  * 50;
  
-  // 动画参数 
+  star.style.left  = posX + '%';
+  star.style.top  = posY + '%';
+ 
+  // 动态参数 
   star.style.animationDelay  = Math.random()  * 3 + 's';
-  star.style.animationDuration  = (Math.random()  * 1.5 + 1) + 's';
+  star.style.animationDuration  = (Math.random()  * 2 + 2) + 's';
+  
+  // 添加光线元素 
+  const core = document.createElement('span'); 
+  star.appendChild(core); 
   
   document.body.appendChild(star); 
- 
-  // 每次动画结束后更新位置 
-  star.addEventListener('animationiteration',  () => {
-    star.style.left  = Math.random()  * 100 + 'vw';
-    star.style.top  = Math.random()  * 100 + 'vh';
-    star.style.animationDuration  = (Math.random()  * 1.5 + 1) + 's';
-  });
 }
