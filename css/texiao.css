@@ -1,0 +1,19 @@
+/* [BlogRoot]/source/css/custom.css  */
+.star {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle,
+      rgba(255,255,255,1) 20%,
+      rgba(255,255,255,0.5) 60%,
+      rgba(255,255,255,0) 80%
+    );
+    pointer-events: none;
+    z-index: 999;
+    animation: starPulse 2s infinite;
+  }
+   
+  @keyframes starPulse {
+    0%, 100% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
