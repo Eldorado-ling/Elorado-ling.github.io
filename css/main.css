@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #65dffe;
+  background: #ffec69;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2566,4 +2566,59 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
+}
+body {
+  background: url("/images/background.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+/* 所有文章区域透明 */
+.posts-expand .post-block,
+.posts-expand .comments {
+  background: rgba(255,255,255,0.7) !important;
+  backdrop-filter: blur(8px); /* 模糊效果增强质感 */
+  border-radius: 12px;
+}
+/* 侧边栏透明 */
+.sidebar-inner {
+  background: rgba(255,255,255,0.7) !important;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+/* 导航栏透明 */
+.header-inner {
+  background: rgba(255,255,255,0.7) !important;
+  transition: all 0.3s ease; /* 为滚动渐变效果做准备 */
+}
+/* 分类/标签卡片透明 */
+.category-all-page .category-list-item,
+.tag-cloud a {
+  background: rgba(255,255,255,0.7) !important;
+}
+@media (max-width: 767px) {
+  .posts-expand .post-block {
+    margin: 10px !important;
+    padding: 15px !important;
+  }
+}
+/* 卡片悬停动画 */
+.post-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* 渐变标题文字 */
+.post-title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* 进度条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  background: rgba(200,200,200,0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100,100,100,0.4);
+  border-radius: 4px;
 }
