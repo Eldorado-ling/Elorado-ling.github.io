@@ -21,3 +21,15 @@
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
 }
+#recent-posts .recent-post-item > .recent-post-info > .article-title .sticky-label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #49b1f5;
+  color: #fff;
+  font-size: 0.62em;
+  line-height: 1.4;
+  vertical-align: 0.12em;
+}
