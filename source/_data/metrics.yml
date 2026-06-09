@@ -1,0 +1,59 @@
+# 月度营收数据（单位：元）
+revenue:
+  - month: 2026-01
+    amount: 12500
+  - month: 2026-02
+    amount: 18200
+  - month: 2026-03
+    amount: 15600
+  - month: 2026-04
+    amount: 21300
+  - month: 2026-05
+    amount: 24800
+  - month: 2026-06
+    amount: 19700
+
+# 月度转化率（单位：%）
+conversion:
+  - month: 2026-01
+    rate: 3.2
+  - month: 2026-02
+    rate: 4.1
+  - month: 2026-03
+    rate: 3.5
+  - month: 2026-04
+    rate: 4.8
+  - month: 2026-05
+    rate: 5.2
+  - month: 2026-06
+    rate: 4.6
+
+# 营收构成
+breakdown:
+  - name: 产品 A
+    value: 42000
+    color: "#49B1F5"
+  - name: 产品 B
+    value: 35000
+    color: "#FF7242"
+  - name: 咨询服务
+    value: 21000
+    color: "#00c4b6"
+  - name: 其他
+    value: 14100
+    color: "#99a9bf"
+
+# 月度客户数
+customers:
+  - month: 2026-01
+    count: 85
+  - month: 2026-02
+    count: 112
+  - month: 2026-03
+    count: 98
+  - month: 2026-04
+    count: 135
+  - month: 2026-05
+    count: 160
+  - month: 2026-06
+    count: 142
