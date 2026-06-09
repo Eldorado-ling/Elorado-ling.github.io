@@ -12,6 +12,7 @@ menu:
   简历: /resume/ || fas fa-id-card
   Skill: /skills/ || fas fa-puzzle-piece
   项目: /projects/ || fas fa-laptop-code
+  数据: /data/ || fas fa-chart-line
   归档: /archives/ || fas fa-folder-open
   分类: /categories/ || fas fa-archive
   标签: /tags/ || fas fa-tags
@@ -501,7 +502,7 @@ mermaid:
   zoom_pan: true
 
 chartjs:
-  enable: false
+  enable: true
   fontColor:
     light: 'rgba(0, 0, 0, 0.8)'
     dark: 'rgba(255, 255, 255, 0.8)'
